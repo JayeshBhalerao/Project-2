@@ -25,7 +25,7 @@ git remote add origin https://github.com/JayeshBhalerao/Project-2.git
 
 created docker file
 
-$ docker build -t project-1 .
+$ docker build -t project-2 .
 $ docker run -dp 9595:9595 --name=project-2 project-2    <!-- optional if running through kubernetes -->
 $ docker images                                          <!-- optional if running through kubernetes -->
 $ docker exec -it project-2 sh                           <!-- optional if running through kubernetes -->
