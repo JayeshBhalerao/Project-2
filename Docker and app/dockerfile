@@ -1,0 +1,19 @@
+FROM node:latest
+
+# Set working directory
+WORKDIR /app
+
+# Copy package.json and package-lock.json first (better caching) in app directory
+COPY package*.json ./
+
+# Install dependencies
+RUN npm install
+
+# Copy application code index.js in app directory
+COPY . .
+
+# Expose the app port
+EXPOSE 9595
+
+# Command to run the app
+CMD ["node", "index.js"]
